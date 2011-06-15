@@ -1,0 +1,7 @@
+install ruby 
+run setup.bat
+
+
+-------------
+
+for build run rake

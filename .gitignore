@@ -1,0 +1,6 @@
+/bin
+
+/build_output
+
+*.usr
+*.suo
