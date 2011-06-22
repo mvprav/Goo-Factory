@@ -26,6 +26,9 @@ public class AdminFactory:Factory<User>
 
 The factory does not create the data in the database , it only create object and populate data in it.
 
+new AdminFactory().Create();
+	
+
 Association 
 
 public class PostFactory:Factory<Post>
