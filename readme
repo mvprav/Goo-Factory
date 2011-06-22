@@ -1,7 +1,53 @@
 install ruby 
 run setup.bat
 
+I hope to make this very similar to factory-girl gem for rails .
 
--------------
+public class UserFactory:Factory<User>
+{
+	public OrganizationFactory()
+	{
+		HasKey(user => user.Id);
+		HasValue(user => user.FirstName, "first name");
+		HasValue(user => user.LastName, "Last name");
+	}
 
-for build run rake
+}
+
+public class AdminFactory:Factory<User>
+{
+	public OrganizationFactory()
+	{
+		HasKey(user => user.Id);
+		HasValue(user => user.FirstName, "admin first name");
+		HasValue(user => user.LastName, "admin last name");
+	}
+}
+
+The factory does not create the data in the database , it only create object and populate data in it.
+
+Association 
+-----------------------------------------------
+public class PostFactory:Factory<Post>
+{
+	public OrganizationFactory()
+	{
+		HasKey(post => post.Id);
+		Associate(post => post.author).With<AuthorFactory>();
+	}
+}
+
+
+Sequences
+-------------------------------------------------------------
+
+public class AdminFactory:Factory<User>
+{
+	public OrganizationFactory()
+	{
+		HasKey(user => user.Id);
+		HasValue(user => user.LastName, new FactorySequence("email{0}@email.com"));
+	}
+}
+The sequenses give unique value with in give execution of test cases .
+

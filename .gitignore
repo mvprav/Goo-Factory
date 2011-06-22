@@ -1,6 +1,10 @@
-/bin
-
+bin/
+obj/
 /build_output
 
 *.usr
 *.suo
+*.user
+*Resharper
+_Resharper.Goo/
+tools/Nunit
