@@ -27,7 +27,7 @@ public class AdminFactory:Factory<User>
 The factory does not create the data in the database , it only create object and populate data in it.
 
 Association 
------------------------------------------------
+
 public class PostFactory:Factory<Post>
 {
 	public OrganizationFactory()
@@ -39,7 +39,6 @@ public class PostFactory:Factory<Post>
 
 
 Sequences
--------------------------------------------------------------
 
 public class AdminFactory:Factory<User>
 {
